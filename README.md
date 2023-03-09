@@ -105,6 +105,7 @@ The code should be recompiled every time you update PyTorch.
 ./scripts/thumos/test.sh
 ```
 * The results should be:
+
 | Method            |  0.3  |  0.4  |  0.5  |  0.6  |  0.7  |  Avg  |
 |-------------------|-------|-------|-------|-------|-------|-------|
 | TemporalMaxer     | 82.8  | 78.9  | 71.8  | 60.5  | 44.7  | 67.7  |
@@ -143,9 +144,10 @@ The code should be recompiled every time you update PyTorch.
 ./scripts/multithumos/test.sh
 ```
 * The results should be:
-| Method            |  0.1  |  0.2  |  0.3  |  0.4  |  0.5  |  0.6  ||  0.7  ||  0.8  ||  0.9  ||  Avg  |
-|-------------------|-------|-------|-------|-------|-------|-------||-------||-------||-------||-------|
-| TemporalMaxer     | 49.1  | 47.5  | 44.3  | 39.4  | 33.4  | 26.5  || 17.4  || 9.1   || 2.24  || 29.9  |
+
+| Method            |  0.1  |  0.2  |  0.3  |  0.4  |  0.5  |  0.6  |  0.7  |  0.8  |  0.9  |  Avg  |
+|-------------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| TemporalMaxer     | 49.1  | 47.5  | 44.3  | 39.4  | 33.4  | 26.5  | 17.4  | 9.1   | 2.24  | 29.9  |
 
 <!-- ## Citation
 Please cite the paper in your publications if it helps your research:
