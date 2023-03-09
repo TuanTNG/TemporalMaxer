@@ -9,6 +9,11 @@ We release the training and testing code for THUMOS, EPIC-Kitchen 100 (verb, nou
 3. [Usage](#usage)
 6. [Citation](#citation)
 
+## Operating Systems and Specs
+* Ubuntu 18.04.5 LTS
+* NVIDIA RTX A6000 
+* NVIDIA-SMI 520.61.05 - Driver Version: 520.61.05 - CUDA Version: 11.8
+
 ## Introduction
 Recent studies have emphasized the importance of applying long-term temporal context modeling (TCM) blocks to the extracted video clip features such as employing complex self-attention mechanisms. In this paper, we present the simplest method ever to address this task and argue that the extracted video clip features are already informative to achieve outstanding performance without sophisticated architectures. To this end, we introduce TemporalMaxer, which minimizes long-term temporal context modeling while maximizing information from the extracted video clip features with a basic, parameter-free, and local region operating max-pooling block. Picking out only the most critical information for adjacent and local clip embeddings, this block results in a more efficient TAL model. We demonstrate that TemporalMaxer outperforms other state-of-the-art methods that utilize long-term TCM such as self-attention on various TAL datasets while requiring significantly fewer parameters and computational resources.
 <div align="center">
