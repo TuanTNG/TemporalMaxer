@@ -111,7 +111,7 @@ The code should be recompiled every time you update PyTorch.
 | TemporalMaxer     | 82.8  | 78.9  | 71.8  | 60.5  | 44.7  | 67.7  |
 
 
-### Reproduce Our Results on THUMOS
+### Reproduce Our Results on MultiTHUMOS
 ##### Download Features and Annotations
 - Download multithumos.tar.gz from this [link](https://1drv.ms/u/s!AmoaChPnSuIOmwHEH3WTAfaSkBfq?e=jXaApc), md5sum `5b2477678abd612440b6099e349442ad`.
 - Make `data` folder in the current code directory.
