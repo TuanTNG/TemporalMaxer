@@ -1,0 +1,59 @@
+model_name: "TemporalMaxerArchitecture"
+dataset_name: multithumos
+train_split: ['validation']
+val_split: ['test']
+dataset: {
+  json_file: ./data/multithumos/multithumos.json,
+  feat_folder: ./data/thumos/i3d_features,
+  file_prefix: ~,
+  file_ext: .npy,
+  num_classes: 65,
+  input_dim: 1024,
+  feat_stride: 4,
+  num_frames: 16,
+  # serve as data augmentation
+  trunc_thresh: 0.5,
+  crop_ratio: [0.9, 1.0],
+  max_seq_len: 2304,
+}
+model: {
+  backbone_type: convPooler,
+  backbone_arch: [3, 5], # [#feature projection layers, #downsampling layer]
+  fpn_type: identity,
+  fpn_norm: layernorm,
+  max_buffer_len_factor: 6.0,
+  assigner: {
+    iou_weight: 2,
+    cls_weight: 1.0,
+    center_radius: 1.5,
+    keep_percent: 1.0,
+    confuse_weight: 0.0
+  }
+}
+opt: {
+  learning_rate: 0.0001,
+  epochs: 60,
+  weight_decay: 0.05,
+}
+loader: {
+  batch_size: 2,
+}
+train_cfg: {
+  init_loss_norm: 100,
+  clip_grad_l2norm: 1.0,
+  cls_prior_prob: 0.01,
+  center_sample: 'none',
+}
+test_cfg: {
+  voting_thresh: 0.7,
+  pre_nms_topk: 3000,
+  max_seg_num: 300,
+  min_score: 0.001,
+  # when using external scores, our model is generating "proposals"
+  # multiclass_nms: False,
+  # ext_score_file: ./data/thumos/annotations/thumos14_cls_scores.pkl,
+  # comment out L47-48 and uncomment L50 to disable score fusion
+  multiclass_nms: True,
+}
+output_folder: ./ckpt
+
