@@ -1,5 +1,5 @@
 ## TemporalMaxer: Maximize Temporal Context with only Max Pooling for Temporal Action Localization
-This is the official implementation of the paper [TemporalMaxer](https://1drv.ms/b/s!AmoaChPnSuIOmn2Nm9bigpMIyXPL?e=wQynah). 
+This is the official implementation of the paper [TemporalMaxer](https://arxiv.org/pdf/2303.09055.pdf). 
 
 We release the training and testing code for THUMOS, EPIC-Kitchen 100 (verb, noun), and MultiTHUMOS datasets.
 
