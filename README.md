@@ -154,7 +154,13 @@ The code should be recompiled every time you update PyTorch.
 |-------------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
 | TemporalMaxer     | 49.1  | 47.5  | 44.3  | 39.4  | 33.4  | 26.5  | 17.4  | 9.1   | 2.24  | 29.9  |
 
-<!-- ## Citation
+## Citation
 Please cite the paper in your publications if it helps your research:
 ```
-```  -->
+@article{tang2023temporalmaxer,
+  title={TemporalMaxer: Maximize Temporal Context with only Max Pooling for Temporal Action Localization},
+  author={Tang, Tuan N and Kim, Kwonyoung and Sohn, Kwanghoon},
+  journal={arXiv preprint arXiv:2303.09055},
+  year={2023}
+}
+```
